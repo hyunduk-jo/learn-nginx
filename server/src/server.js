@@ -15,3 +15,25 @@ app.listen(port, () => console.log(`✅Server running at http://localhost:${port
 app.get('/', (req, res) => {
   res.json({ msg: "✅Server running✅" })
 })
+
+app.get('/todos', (req, res) => {
+  const todos = [
+    {
+      id: 1,
+      text: "1st todo"
+    },
+    {
+      id: 2,
+      text: "Learn nginx"
+    },
+    {
+      id: 3,
+      text: "Learn AWS EC2"
+    },
+    {
+      id: 4,
+      text: "Learn Block Chain"
+    }
+  ]
+  res.json({ todos })
+})
